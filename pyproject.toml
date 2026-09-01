@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "file-organizer"
+version = "0.1.0"
+description = "CLI em Python que organiza arquivos de um diretório por tipo e data."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Leandro Medeiros" }]
+keywords = ["cli", "files", "organizer", "automation"]
+
+[project.scripts]
+file-organizer = "file_organizer.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["file_organizer*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
